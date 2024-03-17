@@ -1,19 +1,16 @@
 # arguments for ID
 import os
 
-n_neighbors = 4
+n_neighbors = 15
 # dist_type = 'Arclength'
-# dist_type = 'Euclidean'
-dist_type = 'Cosine'
-if_norm = True
+dist_type = 'Euclidean'
+# dist_type = 'Cosine'
+if_norm = False
 
-# resfolder = '/research/prip-gongsixu/results/idest/ResNet34/ImageNet/Euclidean/k{:d}'.format(n_neighbors)
-resfolder = '/research/prip-gongsixu/results/idest/sphereface/lfw/cosine/k{:d}'.format(n_neighbors)
+resfolder = '/home/xianglin/projects/git_space/intrinsic-dimensionality/results'
 
-data_filename = '/research/prip-gongsixu/results/feats/evaluation/feat_lfwblufr_sphere.mat'
-dist_table_filename = '/research/prip-gongsixu/results/idest/sphereface/lfw/cosine/dist_table.npy'
-# data_filename = '/research/prip-gongsixu/results/idest/swiss_roll/data_swiss.npy'
-# dist_table_filename = '/research/prip-gongsixu/results/idest/swiss_roll/arclength/dist_table.npy'
+data_filename = '/home/xianglin/projects/DVI_data/resnet18_cifar10/Model/Epoch_200/train_data.npy'
+dist_table_filename = os.path.join(resfolder, 'dist_table.npy')
 
 if_dist_table = True
 if_knn_matrix = True
